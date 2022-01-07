@@ -1,8 +1,9 @@
 package com.weiting.samplepageswitcher
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.weiting.samplepageswitcher.ui.FragmentA
+import com.weiting.samplepageswitcher.ui.FragmentB
 
 class PageAdapter(activity: MainActivity) : FragmentStateAdapter(activity) {
 

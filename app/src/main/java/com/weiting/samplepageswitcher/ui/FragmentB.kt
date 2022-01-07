@@ -1,4 +1,4 @@
-package com.weiting.samplepageswitcher
+package com.weiting.samplepageswitcher.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
