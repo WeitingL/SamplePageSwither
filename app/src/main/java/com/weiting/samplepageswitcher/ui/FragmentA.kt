@@ -17,8 +17,13 @@ class FragmentA: Fragment() {
     ): View {
         val binding = FragmentABinding.inflate(inflater)
         val viewModel = ViewModelProvider(this).get(AViewModel::class.java)
+        val adapter = DataListAdapter()
 
+        viewModel.dataList.observe(viewLifecycleOwner){
+            adapter.submitList(it)
+        }
 
+        binding.rvDateList.adapter = adapter
         return binding.root
     }
 
