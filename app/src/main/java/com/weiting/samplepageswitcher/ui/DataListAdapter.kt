@@ -20,7 +20,10 @@ class DataListAdapter : ListAdapter<Date, DataListAdapter.DateViewHolder>(DiffCa
     inner class DateViewHolder(private val binding: ItemRowBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(date: Date, position: Int) {
-            binding.rowText.text = "項目$position  ${Util().getDateToString(date)}"
+            binding.apply {
+                rowText.text = "項目$position"
+                rowDate.text = "${Util().getDateToString(date)}"
+            }
         }
     }
 

@@ -18,10 +18,28 @@ class MainActivity : AppCompatActivity() {
 
         viewPage.adapter = PageAdapter(this)
 
+        binding.btSwitch.setOnClickListener {
+            when(viewPage.getCurrentItem()){
+                0 -> {
+                    viewPage.setCurrentItem(1)
+                }
+                1 -> {
+                    viewPage.setCurrentItem(0)
+                }
+                else -> {
+                    viewPage.setCurrentItem(0)
+                }
+            }
+        }
+
         TabLayoutMediator(tabLayout, viewPage){ tab, position ->
             when (position){
-                0 -> tab.text = "分頁1"
-                1 -> tab.text = "分頁2"
+                0 -> {
+                    tab.text = "分頁1"
+                }
+                1 -> {
+                    tab.text = "分頁2"
+                }
             }
         }.attach()
 
