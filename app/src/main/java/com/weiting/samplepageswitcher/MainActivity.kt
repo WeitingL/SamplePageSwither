@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val tabLayout = binding.tlTabs
         val viewPage = binding.vpViewPage
 
-        viewPage.adapter = PageAdapter(this, binding.tvTitle)
+        viewPage.adapter = PageAdapter(this)
         viewPage.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -50,7 +50,5 @@ class MainActivity : AppCompatActivity() {
                 1 -> tab.text = "分頁2"
             }
         }.attach()
-
     }
-
 }

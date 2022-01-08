@@ -6,7 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.weiting.samplepageswitcher.ui.FragmentA
 import com.weiting.samplepageswitcher.ui.FragmentB
 
-class PageAdapter(activity: MainActivity, val titleView: TextView) : FragmentStateAdapter(activity) {
+class PageAdapter(activity: MainActivity) : FragmentStateAdapter(activity) {
 
     override fun getItemCount(): Int = 2
 
